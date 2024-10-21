@@ -1,0 +1,36 @@
+pgm1
+
+flex substring.l
+gcc lex.yy.c -o substring -lfl
+./substring
+
+
+pgm2
+
+bison -d y.y
+flex example.l
+gcc lex.yy.c y.tab.c -o example -lfl
+./example
+
+pgm3
+
+bison -d calc.y
+flex calc.l
+gcc calc.tab.c lex.yy.c -o calculator -lfl
+./calculator
+
+
+pgm 4
+
+bison -d  5.y
+flex 5.l
+gcc lex.yy.c 5.tab.c -ll -lm -w
+./a.out input.txt
+
+pgm5
+
+bison -d forloop.y
+flex forloop.l
+ gcc forloop.tab.c lex.yy.c -o forloop -lfl
+ ./forloop
+
